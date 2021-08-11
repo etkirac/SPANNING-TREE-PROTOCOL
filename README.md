@@ -60,8 +60,13 @@ RSTP’de bloklanmış halde bulunan port tipleri Backup Port olarak etiketlenir
 - Topolojide herhangi bir kopma, iptal vb durumda sistem her seferinde STP hesaplamalarını yeniden yapacaktır ve her seferinde başka seçimler gerçekleşebilir. Port altında bazı komutlar sayesinde sistem sabitlenebilir. Çünkü her seferinde Root Bridge, Root Port vs. değişmesi istenmez. Bu komutlar aşağıda belirtilmiştir:
 
 _Uplink-fast_-> Roota giden portlar hiçbir zaman blok durumda olmaz.
+
 _Port fast_ -> Convergence time azalır. Fakat bu porta herhangi bir switch takılabilir ve STP hesaplamalarını bozabilir.
+
 _BPDU guard_-> Port fast aktif edildikten sonra STP hesaplarının bozulmaması için mutlaka BPDU guard aktif edilmeli.
+
 _Root guard_-> Root switch’in designated portlarına root guard denilirse bir daha hiçbir switch root olamaz. Çünkü Root switch, TCN (Topology Change Notification) yapar.
+
 _Loop guard_-> Yazılımsal hatalar için kullanılır. 
+
 _Udld (Unidirectional Link Detection)_->Donanımsal hatalar için kullanılır, sadece fiberde kullanılabilir.
